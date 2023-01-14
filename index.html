@@ -22,28 +22,28 @@
 
         <div class = "keys">
             <div class = "row1">
-                <button id = 7 class = "number" onclick="setNumber(7)">7</button>
-                <button id = 8 class = "number" onclick="setNumber(8)">8</button>
-                <button id = 9 class = "number" onclick="setNumber(9)">9</button>
-                <button id = divide class = "op">/</button>
+                <button class = "number" onclick="setNumber(7)">7</button>
+                <button class = "number" onclick="setNumber(8)">8</button>
+                <button class = "number" onclick="setNumber(9)">9</button>
+                <button class = "op" onclick="getOperation('divide')">/</button>
             </div>
             <div class = "row2">
-                <button id = 4 class = "number" onclick="setNumber(4)">4</button>
-                <button id = 5 class = "number" onclick="setNumber(5)">5</button>
-                <button id = 6 class = "number" onclick="setNumber(6)">6</button>
-                <button id = multiply class = "op">x</button>
+                <button class = "number" onclick="setNumber(4)">4</button>
+                <button class = "number" onclick="setNumber(5)">5</button>
+                <button class = "number" onclick="setNumber(6)">6</button>
+                <button class = "op" onclick="getOperation('multiply')">x</button>
             </div>
             <div class = "row3">
-                <button id = 1 class = "number" onclick="setNumber(1)">1</button>
-                <button id = 2 class = "number" onclick="setNumber(2)">2</button>
-                <button id = 8 class = "number" onclick="setNumber(3)">3</button>
-                <button id = subtract class = "op">-</button>
+                <button class = "number" onclick="setNumber(1)">1</button>
+                <button class = "number" onclick="setNumber(2)">2</button>
+                <button class = "number" onclick="setNumber(3)">3</button>
+                <button class = "op" onclick="getOperation('subtract')">-</button>
             </div>
             <div class = "row4">
-                <button id = dot>.</button>
-                <button id = 0 class = "number" onclick="setNumber(0)">0</button>
-                <button id = equal>=</button>
-                <button id = addition class = "op">+</button>
+                <button >.</button>
+                <button class = "number" onclick="setNumber(0)">0</button>
+                <button id = equal onclick="getOperation('equal')">=</button>
+                <button class = "op" id = add onclick="getOperation('addition')">+</button>
             </div>
         </div>
     </div>
