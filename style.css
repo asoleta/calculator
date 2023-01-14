@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 188, 244);
+    align-items: center;
+    width: 700px;
+    height: 900px;
+    border-radius: 20px;
+    border: 5px solid black;
+    margin-top: 50px;
+}
+
+.display {
+    background-color: rgb(210, 216, 214);
+    width: 600px;
+    height: 150px;
+    margin-top: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+}
+
+.display p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    padding: 0px 15px;
+    color: black;
+}
+
+.buttons {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 20px;
+}
+
+#clear,
+#delete {
+    font-size: 30px;
+    border: 3px solid black;
+    width: 300px;
+    height: 100px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#clear {
+    background-color: rgb(158, 158, 231);
+    color: white;
+}
+
+.keys {
+    width: 600px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row1,
+.row2,
+.row3,
+.row4 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.keys button {
+    font-size: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 135px;
+    height: 100px;
+}
+
+.number {
+    background-color: rgb(169, 82, 184);
+    color: white;
+}
+
+.op {
+    background-color: rgb(233, 146, 161);
+}
