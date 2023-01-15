@@ -28,10 +28,7 @@ button:hover {
     border-radius: 10px;
     display: flex;
     justify-content: right;
-    align-items: baseline;
-}
-
-.display p {
+    align-items:center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 60px;
     padding: 0px 15px;
@@ -62,6 +59,10 @@ button:hover {
     color: white;
 }
 
+#clear:hover {
+    background-color: rgb(113, 113, 206);
+}
+
 .keys {
     width: 600px;
     height: 550px;
@@ -83,7 +84,7 @@ button:hover {
 .keys button {
     font-size: 30px;
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 50px;
     width: 135px;
     height: 100px;
 }
@@ -93,6 +94,14 @@ button:hover {
     color: white;
 }
 
+.number:hover {
+    background-color: rgb(165, 59, 184);
+}
+
 .op {
     background-color: rgb(233, 146, 161);
+}
+
+.op:hover {
+    background-color: rgb(212, 106, 123);
 }
