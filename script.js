@@ -1,55 +1,45 @@
-let num1;
-let num2;
-let total = 0;
-let operation;
-let display = document.querySelector(".display p");
-let add = document.querySelector("#add");
-let equal = document.querySelector("#equal");
+const screenDisplay = document.querySelector(".display");
 
-    
-add.addEventListener("click", calculate);
-equal.addEventListener("click", () => {
-    display.innerHTML = total;
-});
+//creates a node list which is treated like an array
+const buttons = document.querySelectorAll("button");
 
+//goes through each button in node list and adds an eventListener
+buttons.forEach(button => button.addEventListener('click', () => calculate(button)));
 
-//set the current number
-function setNumber(num)
+//array will store values of buttons pressed
+let calculation = [];
+let accumCalc;
+
+//Functions
+function calculate(button)
 {
-    if (total == 0)
+    //stores text content of button pressed
+    const value = button.textContent;
+
+    if (value == "CLEAR")
     {
-        num1 = num;
+        calculation = []; //clear the array
+        screenDisplay.textContent = '.';
+    }
+
+    else if (value == "=")
+    {
+        screenDisplay.textContent = eval(accumCalc);
+    }
+
+    else if (value == "DELETE")
+    {
+        calculation.splice(-1);
+        accumCalc = calculation.join('');
+        screenDisplay.textContent = accumCalc;
     }
 
     else
     {
-        num2 = num;
+        //adds value to the array
+        calculation.push(value);
+        accumCalc = calculation.join('');
+        screenDisplay.textContent = accumCalc;
     }
-}
 
-//get desired operation
-function getOperation(op)
-{
-    operation = op;
-}
-
-function calculate()
-{
-    console.log("Entered calculate");
-    switch (operation)
-    {
-        case "addition":
-            total += (num1 + num2);
-            console.log(total);
-            break;
-        case 'subtract':
-            total -= currentNumber;
-            break;
-        case 'multiply':
-            total *= currentNumber;
-            break;
-        case 'divide':
-            total /= currentNumber;
-            break;
-    }
 }
